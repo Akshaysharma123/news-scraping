@@ -1,0 +1,99 @@
+
+# print(details["main_source"])
+# print(details["list_heading"])
+# # print(details["card-link"])
+# print(details["card-images"])
+# print(details["list_title-over"])
+# print(details["card-link-1"])
+# print(details["card-title-1"])
+# print(details["card-images-1"])
+# print(details["card-link-2"])
+# print(details["card-title-2"])
+# print(details["card-images-2"])
+# print(details["card-link-down"])
+# print(details["ui_cards_inside"])
+
+
+ #    #Second-card:
+    #     card_link = data.find('div', class_= 'card col-xs-12 col-sm-6 col-md-8 col-lg-6')
+    #     link_a = card_link.find('a', class_='image')
+    #     card_link = link_a.get('href').strip()
+    #     details['card-link-1'] =  card_link # image-heading
+    #     # print(card_link)
+
+    #     card_link_2 =data.find('div', class_= 'card col-xs-12 col-sm-6 col-md-8 col-lg-6')        
+    #     list_title = card_link_2.find('div', class_= 'content overlay')
+    #     list_title= list_title.find('a').text
+    #     list_titles = list_title.strip()
+    #     details['card-title-1'] = list_titles # front-images
+        
+    #     card_link_1 =data.find('div', class_= 'card col-xs-12 col-sm-6 col-md-8 col-lg-6')
+    #     picture = card_link_1.find ('picture', class_='img-responsive')
+    #     img = picture.find ('img')
+    #     imgSource = img['src'].strip()
+    #     details['card-images-1'] = shortUrl + imgSource # image-source
+
+#third-card:  
+        
+        # card_link = data.find('div', class_= 'card col-xs-12 col-sm-6 col-md-4 col-lg-3')
+        # link_a = card_link.find('a', class_='image')
+        # card_link = link_a.get('href').strip()
+        # details['card-link-2'] =  card_link # image-heading
+        # # print(card_link)
+
+        # card_link_2 =data.find('div', class_= 'card col-xs-12 col-sm-6 col-md-4 col-lg-3')        
+        # list_title = card_link_2.find('div', class_= 'content overlay')
+        # list_title= list_title.find('a').text
+        # list_titles = list_title.strip()
+        # details['card-title-2'] = list_titles # front-images
+        
+        # card_link_1 =data.find('div', class_= 'card col-xs-12 col-sm-6 col-md-4 col-lg-3')
+        # picture = card_link_1.find ('picture', class_='img-responsive')
+        # img = picture.find ('img')
+        # imgSource = img['src'].strip()
+        # details['card-images-2'] = shortUrl + imgSource # image-source
+
+ # # without-overlap
+
+       
+        # card_link_down = data.find('div', class_= 'card col-xs-12 col-sm-4')
+        # link_b = card_link_down.find('a', class_='image')
+        # card_link_down = link_b.get('href').strip()
+        # details['card-link-down'] = card_link_down # title-heading
+        # # print(card_link_down)
+
+        # list_title = data.find('div', class_= 'content overlay')
+        # list_title= list_title.find('a').text
+        # list_titles = list_title.strip()
+        # details['list_title-over'] = list_titles #without-overlap-link
+
+        # list_up = data.find('div',class_= 'ui cards')
+        # list_col = list_up.find('div', class_='card col-xs-12 col-sm-4')
+        # list_down = list_col.find('div', class_='content')
+        # ui_cards_inside = list_down.find('a',class_='header tiny').text.strip()
+        # details['ui_cards_inside'] = ui_cards_inside #without-overlap-title
+        # # print(ui_cards_inside)
+
+
+ # for data in soup.find_all('main', {'class': 'container container js-quickedit-main-content'}):
+    #     list_heading = data.find('h2',{'class':'pane-title'}) 
+    #     heading = list_heading.text.strip()
+    #     details['list_heading'] = heading # site-heading
+    #     # print(list_heading)
+        
+    #     card_link = data.find('div', class_= 'card col-xs-12 col-sm-6 col-md-4 col-lg-3')
+    #     link_a = card_link.find('a', class_='image')
+    #     card_link = link_a.get('href').strip()
+    #     details['card-link'] =  card_link # image-heading
+    #     # print(link)
+
+    #     picture = data.find ('picture', class_='img-responsive')
+    #     img = picture.find ('img')
+    #     imgSource = img['src'].strip()
+    #     details['card-images'] = shortUrl + imgSource # image-source
+
+    #     list_title = data.find('div', class_= 'content overlay')
+    #     list_title= list_title.find('a').text
+    #     list_titles = list_title.strip()
+    #     details['list_title-over'] = list_titles # front-images
+
