@@ -13,6 +13,7 @@ def getDetails(main_url):
 
     views_cards = soup.find_all('section', {'class':'col-sm-12'})
     card_clear = views_cards[0].find_all('div', {'class':"card clearfix"})
+    
     for card in card_clear:
 
         sub_title = card.find('div', {'class':'card-block'})
@@ -30,6 +31,7 @@ def getDetails(main_url):
         img = card.find('img')['src'] #img_link
         time = card.find('time').text #time_link
 
+        # configure post request parameters
         data.append({
                         'sub_title':sub_working,
                         'sub_title_link':shortUrl + sub_title_link,
