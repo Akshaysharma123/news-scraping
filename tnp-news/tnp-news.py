@@ -1,6 +1,10 @@
+import threading 
 import requests
 from bs4 import BeautifulSoup
+from tnp-news import getDetails
 
+
+def work():
 main_url = "https://www.tnp.sg/news/singapore"
 shortUrl = "https://www.tnp.sg"
 
@@ -49,61 +53,6 @@ for detail in details:
     print(detail)
 
 
-        # else:
-        #     non_overlay = card.find('div', {'class':'content'})
-        #     if non_overlay is not None:
-        #         href_link = non_overlay.find('a').get('href')
-        #         href_text = non_overlay.find('a').text
-
-        # img_src = ''
-        # for i in image:
-        #     img_src = "{0}{1}".format(shortUrl, i['src'])
 
 
 
-
- # little_title = card.find('div',{'class':'card-block'})
-        # sub_title = card.find('div',{'class':'card-sub-title'})
-        # time = card.find('div',{'class':'card-footer'})
-
-
-        
-        # data.append({
-        #     # 'heading':col_heading,
-        #     # 'href':href_link,
-        #     'text':href_text,
-        #     # 'image':img_src,
-        #     # 'heading':href_heading
-        # })
-
-        #   for card in card_clear:
-#         card_media = card.find('div', {'class':'card-block'})
-
-#         if card_media is not None:
-#             href_sub_link = card_media.find('a').get('href')
-#             href_text_heading = card_media.find('a').text
-
-#         for heading_card in card_clear:   
-#                 big_heading = heading_card.find('h2', {'class':'card-title'})
-
-#                 if  big_heading is not None:
-#                         href_link =  big_heading.find('a').get('href')
-#                         href_text =  big_heading.find('a').text
-#                         # print(href_link)
-
-#         for card in card_clear:   
-#                 card_media = card.find('div', {'class':'card-footer'})
-
-#                 if card_media is not None:
-#                         href_text_time = card_media.find('time').text
-#                         # print(href_text_time)                          
-
-
-         
-#         data.append({
-#                 'heading_text':href_text_heading,
-#                 'sub_href':shortUrl + href_sub_link,
-#                 'href': href_link,
-#                 'text':href_text,
-#                 'Time':href_text_time           
-#         })
