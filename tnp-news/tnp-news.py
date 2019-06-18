@@ -1,10 +1,8 @@
-import threading 
 import requests
 from bs4 import BeautifulSoup
-from tnp-news import getDetails
 
 
-def work():
+
 main_url = "https://www.tnp.sg/news/singapore"
 shortUrl = "https://www.tnp.sg"
 
@@ -21,19 +19,26 @@ def getDetails(main_url):
     for card in card_clear:
 
         sub_title = card.find('div', {'class':'card-block'})
-        sub_working = sub_title.find('a').text #sub_title
+        sub_working = sub_title.find('a').text.strip() #sub_title
         
         
         title = card.find('div', {'class':'card-block'})
         title_second = title.find('h2',{'class':'card-title'})
-        title_working = title_second.find('a').text #heading_title
+        title_working = title_second.find('a').text.strip() #heading_title
         
 
         sub_title_link = sub_title.find('a', 'active').get('href') #sub_title_link
-        title_link = title.find('a').get('href') #title_link
+        title_link = title.find('a').get('href').strip() #title_link
+ 
+        img = card.find('div',{'class':'card-media'})
+        img_patch = img.find('img')
 
-        img = card.find('img')['src'] #img_link
-        time = card.find('time').text #time_link
+        if img_patch is not None:
+            img_src = img_patch['src'].strip()  
+
+
+
+        time = card.find('time').text.strip() #time_link
 
         # configure post request parameters
         data.append({
@@ -42,7 +47,7 @@ def getDetails(main_url):
                         'heading_title': title_working,
                         'title_link':shortUrl +title_link,
                         'news_time':time,
-                        'image':img
+                        'image':img_src
                 })
 
 
@@ -53,6 +58,11 @@ for detail in details:
     print(detail)
 
 
+  # pic = card.find ('div',{'class':'card-media'})
+        # pic2 = pic.find ('a', {'href'})
+        # pic3 = pic2.find ('img',{'class':'img-responsive'})['src']
+        # print(pic3)
+        # img = pic3.find('img')['src'] #img_link
 
 
-
+# https://github.com/AdityaAshtikar/backup
