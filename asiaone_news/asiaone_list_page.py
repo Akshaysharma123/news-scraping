@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+# def main2():
+    
 main_url = "https://www.asiaone.com/singapore"
 shortUrl = "https://www.asiaone.com"
 
@@ -55,3 +57,8 @@ def getDetails(main_url):
 details = getDetails(main_url)
 for detail in details:
     print(detail)
+    if __name__ == "__main__":
+            import time
+            start_time = time.time()
+           
+            print("--- %s seconds ---" % (time.time() - start_time))

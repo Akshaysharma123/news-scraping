@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-
 main_url = "https://www.tnp.sg/news/singapore"
 shortUrl = "https://www.tnp.sg"
 
@@ -56,13 +54,6 @@ def getDetails(main_url):
 details = getDetails(main_url)
 for detail in details:
     print(detail)
-
-
-  # pic = card.find ('div',{'class':'card-media'})
-        # pic2 = pic.find ('a', {'href'})
-        # pic3 = pic2.find ('img',{'class':'img-responsive'})['src']
-        # print(pic3)
-        # img = pic3.find('img')['src'] #img_link
 
 
 # https://github.com/AdityaAshtikar/backup
